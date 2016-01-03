@@ -43,6 +43,9 @@ var app = {
         console.log("device ready, start making you custom calls!");
 
         // Start adding your code here....
+			window.plugins.html5Video.initialize({
+				"video1" : "oprasi.mp4"
+			})
 
     }
 };
