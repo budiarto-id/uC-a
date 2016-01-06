@@ -7,10 +7,13 @@
 
         <link rel="stylesheet" href="libs/jQM-flat/jquery.mobile.flatui.css">
         <link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
 
         <title>Pengendalian Sosial</title>
         <script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
         <script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.3.2.min.js"></script>
+		</script><script type="text/javascript" src="libs/slick/slick.min.js"></script>
     </head>
     <body>
         <div id="app">
@@ -43,18 +46,47 @@
             <div id="pengertian-page" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page" data-role="button" data-icon="arrow-l" data-inline="true">Back</a>
-                    <h1>Pengertian</h1>
+                    <h1>Apresepsi</h1>
                 </div>
                 <div data-role="content" style="font-size:14px">
-				<video id="video1" loop></video>
-				<a href="#" data-role="button" data-icon="arrow-l" data-inline="true" onclick="window.plugins.html5Video.play('video1')">Play</a>
-                
-<p>Pengendalian sosial <em>social control</em> adalah cara dan proses pengawasan yang direncanakan atau tidak direncanakan yang bertujuan untuk mengajak mendidik atau bahkan memaksa warga masyarakat agar mematuhi norma dan nilai yang berlaku.</p>
-<p>dan seterusnya</p>
-<p>dan seterusnya</p>
+				<h3>Perhatikan gambar-gambar di bawah ini!</h3>
+				<div class="slider slider-for">
+				  <div><img src="img/carousel/gbr1.jpg" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr2.jpg" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr3.jpg" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr4.jpg" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr5.png" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr6.jpg" style="width:100%"/></div>
+				</div>
+				<div class="slider slider-nav">
+				  <div><img src="img/carousel/gbr1.jpg" style="width:50%"/></div>
+				  <div><img src="img/carousel/gbr2.jpg" style="width:50%"/></div>
+				  <div><img src="img/carousel/gbr3.jpg" style="width:50%"/></div>
+				  <div><img src="img/carousel/gbr4.jpg" style="width:50%"/></div>
+				  <div><img src="img/carousel/gbr5.png" style="width:50%"/></div>
+				  <div><img src="img/carousel/gbr6.jpg" style="width:50%"/></div>
+				</div>
+				<hr/>
+				Dari gambar di atas, apa yang dapat kalian simpulkan?
+				<hr/>
+				<a data-theme="b" href="#materi-page" data-role="button">Masuk ke Materi</a>
               </div>
                 
             </div>
+			
+			 
+          <div id="materi-page" data-role="page">
+                <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
+                    <a href="#home-page" data-role="button" data-icon="arrow-l" data-inline="true">Back</a>
+                    <h1>Pengendalian Sosial</h1>
+                </div>
+                <div data-role="content" style="font-size:14px; text-align:justify">
+					<p>Pengendalian sosial kerap berkaitan erat dengan norma dan nilai sosial. Bagi anggota masyarakat, norma sosial mengandung harapan dan dijadikan sebagai pedoman bertindak. Namun, masih saja terjadi penyimpangan dari norma-norma yang berlaku. Maka, agar masyarakat berlaku sesuai dengan pedoman itu, pengendalian merupakan mekanisme untuk mencegah terjadinya penyimpangan dan mengarahkan orang untuk bertindak menurut norma-norma yang telah melembaga.<br/>
+					<center><img src="img/materi1.jpg" style="width:80%"/></center>
+					<p>Pengendalian sosial (<em>social control</em>) adalah cara dan proses pengawasan yang direncanakan atau tidak direncanakan yang bertujuan untuk mengajak, mendidik, atau bahkan memaksa warga masyarakat agar mematuhi norma dan nilai yang berlaku. 
+					<p>Pengendalian sosial berproses pada tiga pola, yaitu pengendalian sosial kelompok terhadap kelompok, kelompok terhadap anggota-anggotanya, dan pengendalian pribadi terhadap pribadi  lainnya.
+                </div>
+            </div><!-- page -->
             
           <div id="jenis-page" data-role="page">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
@@ -143,12 +175,28 @@
 
 
         <script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('.slider-for').slick({
+			  slidesToShow: 1,
+			  slidesToScroll: 1,
+			  arrows: false,
+			  fade: true,
+			  asNavFor: '.slider-nav'
+			});
+			$('.slider-nav').slick({
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+			  asNavFor: '.slider-for',
+			  dots: true,
+			  centerMode: true,
+			  focusOnSelect: true
+			});
+		});
+		</script>
 
         <script type="text/javascript">
             app.initialize();
-			window.plugins.html5Video.initialize({
-				"video1" : "oprasi.mp4"
-			})
         </script>
     </body>
 </html>
