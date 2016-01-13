@@ -22,12 +22,14 @@
         <div id="app">
             <div id="splash-page" data-role="page" style="background-image:url('img/bg-splash.jpg'); background-size: 100% 100%; background-repeat: no-repeat;">
                 <div data-role="content">
-                    <div id="menu" style="padding-top:50%; padding-left:35%; width:30%;">
-                        <a data-theme="b" href="#home-page" data-role="button">Mulai</a>
+                    <div id="menu" style="padding-top:50%;">
+					<center>
+                        <a data-theme="b" href="#home-page"><img src="img/ico-start.png"/></a>
+					</center>
                     </div>
                 </div>
             </div><!-- /page  -->
-            <div id="home-page" data-role="page" style="background-color: rgb(180, 254, 253);">
+            <div id="home-page" data-role="page" style="background-color: #1CBB9B;">
 			
 					<img src="img/tawuranpelajar.jpg" width="100%">
                 <div data-role="content">
@@ -35,18 +37,38 @@
                             
                         </div>
                     <div id="menu">
-                        <a data-icon="flat-menu" data-theme="a" href="#pengertian-page" data-role="button">Pembelajaran</a>
-						<!--
-                        <a data-icon="flat-menu" data-theme="b" href="#jenis-page" data-role="button">Jenis Jenis Pengendalian</a>
-                        <a data-icon="flat-menu" data-theme="a" href="#fungsi-page" data-role="button">Fungsi Pengendalian Sosial</a>-->
-                        <a data-icon="flat-menu" data-theme="b" href="#evaluasi-page" data-role="button">Evaluasi</a>
-                        <a data-icon="flat-menu" data-theme="f" href="#tentang-page" data-role="button">Tentang Penulis</a>
-                        <a data-icon="flat-menu" data-theme="d" data-role="button" onclick="navigator.app.exitApp();">Keluar</a>
+						<ul data-role="listview">
+							<li data-theme="a">
+								<a href="#pengertian-page" data-theme="a">
+									<img src="img/ico-pembelajaran.png">
+									<h2>PEMBELAJARAN</h2>
+									<p>Pengendalian dan penyimpangan sosial</p>
+								</a>
+							</li>
+							<li data-theme="b">
+								<a href="#evaluasi-page">
+									<img src="img/ico-evaluasi.png">
+									<h2>EVALUASI</h2>
+								</a>
+							</li>
+							<li data-theme="e">
+								<a href="#tentang-page">
+									<img src="img/ico-tentang-penulis.png">
+									<h2>TENTANG PENULIS</h2>
+								</a>
+							</li>
+							<li data-theme="d">
+								<a onclick="navigator.app.exitApp();">
+									<img src="img/ico-keluar.png">
+									<h2>KELUAR</h2>
+								</a>
+							</li>
+						</ul>
                     </div>
                 </div>
             </div><!-- /page  -->
 
-            <div id="pengertian-page" data-role="page">
+            <div id="pengertian-page" data-role="page"  style="background-color: rgb(255, 236, 170);">
                 <div data-role="header" data-id="header" id="header" data-position="fixed" class="ui-header">
                     <a href="#home-page" data-role="button" data-icon="arrow-l" data-inline="true">Back</a>
                     <h1>Apresepsi</h1>
@@ -71,7 +93,6 @@
 				  <div><img src="img/carousel/gbr6.jpg" style="width:100%"/></div>
 				</div>-->
 				<hr/>
-				<a href="#" onclick="VideoPlayer.play('file:///android_asset/www/video/materi.mp4')">Play File MP4</a><br><br>
 				Dari gambar di atas, apa yang dapat kalian simpulkan?
 				<hr/>
 				<a data-theme="b" href="#materi-page" data-role="button">Masuk ke Materi</a>
@@ -89,7 +110,8 @@
 					<p>Pengendalian sosial kerap berkaitan erat dengan norma dan nilai sosial. Bagi anggota masyarakat, norma sosial mengandung harapan dan dijadikan sebagai pedoman bertindak. Namun, masih saja terjadi penyimpangan dari norma-norma yang berlaku. Maka, agar masyarakat berlaku sesuai dengan pedoman itu, pengendalian merupakan mekanisme untuk mencegah terjadinya penyimpangan dan mengarahkan orang untuk bertindak menurut norma-norma yang telah melembaga.<br/>
 					<center><img src="img/materi1.jpg" style="width:80%"/></center>
 					<p>Pengendalian sosial (<em>social control</em>) adalah cara dan proses pengawasan yang direncanakan atau tidak direncanakan yang bertujuan untuk mengajak, mendidik, atau bahkan memaksa warga masyarakat agar mematuhi norma dan nilai yang berlaku. 
-					<p>Pengendalian sosial berproses pada tiga pola, yaitu pengendalian sosial kelompok terhadap kelompok, kelompok terhadap anggota-anggotanya, dan pengendalian pribadi terhadap pribadi  lainnya.
+					<p>Pengendalian sosial berproses pada tiga pola, yaitu pengendalian sosial kelompok terhadap kelompok, kelompok terhadap anggota-anggotanya, dan pengendalian pribadi terhadap pribadi  lainnya.<br/>
+				<a href="#" onclick="VideoPlayer.play('file:///android_asset/www/video/materi.mp4')" data-role="button" data-theme="a" data-icon="flat-video">Putar Video</a><br><br>
                 </div>
             </div><!-- page -->
             
