@@ -6,14 +6,17 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi">
 
         <link rel="stylesheet" href="libs/jQM-flat/jquery.mobile.flatui.css">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-		<link rel="stylesheet" type="text/css" href="libs/slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="libs/slick/slick-theme.css"/>
-
-        <title>Pengendalian Sosial</title>
+        <link rel="stylesheet" type="text/css" href="css/index.css">    
+		<!-- Important Owl stylesheet -->
+		<link rel="stylesheet" href="libs/owl-carousel/owl.carousel.css">
+		 
+		<!-- Default Theme -->
+		<link rel="stylesheet" href="libs/owl-carousel/owl.theme.css">
         <script type="text/javascript" src="libs/jquery-2.0.3.min.js"></script>
         <script type="text/javascript" src="libs/jQueryMobile/jquery.mobile-1.3.2.min.js"></script>
-		</script><script type="text/javascript" src="libs/slick/slick.min.js"></script>
+		<!-- Include js plugin -->
+		<script src="libs/owl-carousel/owl.carousel.js"></script>
+        <title>Pengendalian Sosial</title>
     </head>
     <body>
         <div id="app">
@@ -50,7 +53,7 @@
                 </div>
                 <div data-role="content" style="font-size:14px">
 				<h3>Perhatikan gambar-gambar di bawah ini!</h3>
-				<div class="slider slider-for">
+				<div  id="owl-demo" class="owl-carousel">
 				  <div><img src="img/carousel/gbr1.jpg" style="width:100%"/></div>
 				  <div><img src="img/carousel/gbr2.jpg" style="width:100%"/></div>
 				  <div><img src="img/carousel/gbr3.jpg" style="width:100%"/></div>
@@ -58,15 +61,17 @@
 				  <div><img src="img/carousel/gbr5.png" style="width:100%"/></div>
 				  <div><img src="img/carousel/gbr6.jpg" style="width:100%"/></div>
 				</div>
+				<!--
 				<div class="slider slider-nav">
-				  <div><img src="img/carousel/gbr1.jpg" style="width:50%"/></div>
-				  <div><img src="img/carousel/gbr2.jpg" style="width:50%"/></div>
-				  <div><img src="img/carousel/gbr3.jpg" style="width:50%"/></div>
-				  <div><img src="img/carousel/gbr4.jpg" style="width:50%"/></div>
-				  <div><img src="img/carousel/gbr5.png" style="width:50%"/></div>
-				  <div><img src="img/carousel/gbr6.jpg" style="width:50%"/></div>
-				</div>
+				  <div><img src="img/carousel/gbr1.jpg" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr2.jpg" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr3.jpg" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr4.jpg" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr5.png" style="width:100%"/></div>
+				  <div><img src="img/carousel/gbr6.jpg" style="width:100%"/></div>
+				</div>-->
 				<hr/>
+				<a href="#" onclick="playVideo('file:///android_asset/www/video/materi.mp4')">Play File MP4</a><br><br>
 				Dari gambar di atas, apa yang dapat kalian simpulkan?
 				<hr/>
 				<a data-theme="b" href="#materi-page" data-role="button">Masuk ke Materi</a>
@@ -172,11 +177,22 @@
 
         <script type="text/javascript" src="libs/fastclick.min.js"></script>
         <script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" charset="utf-8" src="video.js"></script>
 
 
         <script type="text/javascript" src="js/index.js"></script>
 		<script type="text/javascript">
 		$(document).ready(function(){
+		  $("#owl-demo").owlCarousel({
+			autoPlay : 3000,
+			stopOnHover : true,
+			navigation:true,
+			paginationSpeed : 1000,
+			goToFirstSpeed : 2000,
+			singleItem : true,
+			autoHeight : true,
+			transitionStyle:"fade"
+		  });
 			$('.slider-for').slick({
 			  slidesToShow: 1,
 			  slidesToScroll: 1,
@@ -197,6 +213,9 @@
 
         <script type="text/javascript">
             app.initialize();
+			function playVideo(vidUrl) {
+				window.plugins.videoPlayer.play(vidUrl);
+			}
         </script>
     </body>
 </html>
