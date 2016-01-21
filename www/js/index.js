@@ -24,7 +24,7 @@ var app = {
     initialize: function() {
         console.log("console log init");
         this.bindEvents();
-        this.initFastClick();
+        //this.initFastClick();
     },
     // Bind Event Listeners
     //
@@ -33,11 +33,11 @@ var app = {
     bindEvents: function() {
         document.addEventListener('deviceready', this.onDeviceReady, false);
     },
-    initFastClick : function() {
+   /* initFastClick : function() {
         window.addEventListener('load', function() {
             FastClick.attach(document.body);
         }, false);
-    },
+    },*/
     // Phonegap is now ready...
     onDeviceReady: function() {
         console.log("device ready, start making you custom calls!");
