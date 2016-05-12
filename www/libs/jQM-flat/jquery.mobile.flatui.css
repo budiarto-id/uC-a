@@ -223,13 +223,7 @@
 .ui-body-d.ui-input-text.ui-focus{border:2px solid #e84c3d;-webkit-transition:border linear .2s;-moz-transition:border linear .2s;-o-transition:border linear .2s;transition:border linear .2s}
 .ui-btn-up-d{border:1px solid #c1392b;background:#c1392b;font-weight:bold;color:#fff;}
 .ui-btn-up-d:visited,.ui-btn-up-d a.ui-link-inherit{color:#fff}
-.ui-btn-hover-d{
-	border: 1px solid #e84c3d;
-	background: #e84c3d;
-	font-weight: bold;
-	color: #fff;
-	font-size: 12px;
-}
+.ui-btn-hover-d{border:1px solid #e84c3d;background:#e84c3d;font-weight:bold;color:#fff;}
 .ui-btn-hover-d:visited,.ui-btn-hover-d:hover,.ui-btn-hover-d a.ui-link-inherit{color:#fff}
 .ui-btn-down-d{border:1px solid #e84c3d;background:#e84c3d;font-weight:bold;color:#fff;}
 .ui-btn-down-d:visited,.ui-btn-down-d:hover,.ui-btn-down-d a.ui-link-inherit{color:#fff}
